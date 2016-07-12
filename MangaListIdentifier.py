@@ -10,7 +10,7 @@ mangaListLnks = []
 for li in soup.find_all('li'):
     try:
         if li.a.string != None and len(li.a.string) > 1:
-            
+            print li.a.string
             mangaList.append(li.a.string)
             #mangaList = tuple(mangaList)
             

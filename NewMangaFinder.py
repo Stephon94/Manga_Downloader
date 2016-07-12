@@ -1,11 +1,15 @@
 import urllib2 as look
-import requests
+#import requests
 import os
+from google import search
 from bs4 import BeautifulSoup
 
 
 mangaName = raw_input('What manga are you looking for? (Please type EXACT name of manga)')
-mangaName = mangaName.replace(" ", "-")
+for url in search(mangaName+" site:myanimelist.net", stop=1):
+    print url[0]
+
+'''mangaName = mangaName.replace(" ", "-")
 mangaName = mangaName.lower()
 try:
     os.mkdir("C:/Users/Brian/Desktop/Mangas/"+mangaName.upper())
@@ -120,7 +124,7 @@ else:
         print "Yup, Finished!"
 
     else:
-        print"Already own Chapter!"
+        print"Already own Chapter!"'''
         
 
 
