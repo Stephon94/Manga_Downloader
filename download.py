@@ -12,7 +12,7 @@ def allthepages(mangaurl):
 			url = requests.get('http://www.mangareader.net'+ mangaurl +'/' + str(chapter) +'/'+ str(page))
 			soup = BeautifulSoup(url.text)
 			image = soup.find("img", { "id" : "img" })
-			print "currently at", chapter, "/", page
+			print "Downloading..", "Chapter:", chapter, "/",  page
 			if image is not None:
 				images.append(image)
 				page += 1
